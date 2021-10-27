@@ -1,0 +1,152 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Oct 27, 2021 at 06:30 AM
+-- Server version: 10.1.32-MariaDB
+-- PHP Version: 7.2.5
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `tes_backend`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `companies`
+--
+
+CREATE TABLE `companies` (
+  `id` int(32) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `membership_type` int(32) NOT NULL,
+  `status` int(32) NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
+
+--
+-- Dumping data for table `companies`
+--
+
+INSERT INTO `companies` (`id`, `name`, `membership_type`, `status`, `updated_at`, `created_at`) VALUES
+(1, 'GADINGJATI MEBEL JASA EKSPEDISI', 3, 1, '2021-07-19 02:28:13', '2021-10-27 03:56:48'),
+(2, 'PT.KALIBER MITRA SAKTI', 4, 1, '2021-07-19 02:28:15', '2021-10-27 03:56:48'),
+(3, 'PT. MANGGALA ARTHA INDONESIA', 4, 1, '2021-07-19 02:28:16', '2021-10-27 03:56:48'),
+(4, 'PT. BARUNA INDONUSA', 4, 1, '2021-07-19 02:28:21', '2021-10-27 03:56:48'),
+(5, 'CV. PUTRA DEKA MANDIRI', 4, 1, '2021-07-19 02:28:21', '2021-10-27 03:56:48'),
+(6, 'TRUST DISPLAY', 3, 1, '2021-07-19 02:28:22', '2021-10-27 03:56:48'),
+(7, 'CV. Berlian Saka Perkasa Engineering', 4, 1, '2021-07-19 02:28:24', '2021-10-27 03:56:48'),
+(8, 'PT. SETIA ANDALAN SUKSES', 4, 1, '2021-07-19 02:28:24', '2021-10-27 03:56:48'),
+(9, 'PT SINAR SURYA ABADI SEJAHTERA', 4, 1, '2021-07-19 02:28:24', '2021-10-27 03:56:48'),
+(10, 'CV SURYA MANDIRI', 4, 1, '2021-07-19 02:28:25', '2021-10-27 03:56:48'),
+(11, 'CV BERKAH DOA BUNDA', 4, 1, '2021-07-19 02:28:31', '2021-10-27 03:56:48'),
+(12, 'SAHARA SUKSES MANDIRI', 4, 1, '2021-07-19 02:28:33', '2021-10-27 03:56:48'),
+(13, 'PT. TULIP TONATA INDONESIA', 4, 1, '2021-07-19 02:28:33', '2021-10-27 03:56:48'),
+(14, 'PT. RIVALINDO TRANS MANDIRI', 4, 1, '2021-07-19 02:28:36', '2021-10-27 03:56:48'),
+(15, 'PT ANEKA JASA GRHADIKA', 4, 1, '2021-07-19 11:00:16', '2021-10-27 03:56:48'),
+(16, 'CV. VISQA CHEMICAL MAKMUR', 3, 1, '2021-08-26 10:51:45', '2021-10-27 03:56:48'),
+(17, 'UD alfin jaya tehnik ac', 3, 1, '2021-09-06 12:43:09', '2021-10-27 03:56:48'),
+(18, 'GARUDA SOUVENIR', 4, 1, '2021-09-07 16:48:42', '2021-10-27 03:56:48'),
+(19, 'Triphi Indonesia', 3, 1, '2021-09-14 10:35:58', '2021-10-27 03:56:48'),
+(20, 'Wuling Motors Jakarta', 3, 1, '2021-09-14 11:45:06', '2021-10-27 03:56:48'),
+(21, 'PT SUMBER ROSO AGROMAKMUR', 5, 1, '2021-09-23 14:06:49', '2021-10-27 03:56:48'),
+(22, 'PT. TOTAL ABADI SOLUSINDO ( Authorized Distributor & General Contractor )', 2, 1, '2021-09-23 15:27:47', '2021-10-27 03:56:48'),
+(23, 'PT Buana Baja Bina Semesta', 2, 1, '2021-09-23 15:45:31', '2021-10-27 03:56:48'),
+(24, 'Jaya Elektrindo', 2, 1, '2021-09-23 16:13:08', '2021-10-27 03:56:48'),
+(25, 'PT. Rajawali Trans Logistic', 2, 1, '2021-09-23 16:47:26', '2021-10-27 03:56:48'),
+(26, 'CV. INTAN KARYA MANDIRI', 2, 1, '2021-09-23 17:05:26', '2021-10-27 03:56:48'),
+(27, 'xamu', 5, 1, '2021-09-23 17:06:35', '2021-10-27 03:56:48'),
+(28, 'cv lamtama sianturindo', 2, 1, '2021-09-24 05:11:10', '2021-10-27 03:56:48'),
+(29, 'Selatan Jaya Plastik Surabaya', 2, 1, '2021-09-24 07:37:42', '2021-10-27 03:56:48'),
+(30, 'PT. ARISCO MANDIRI', 5, 1, '2021-09-24 07:43:36', '2021-10-27 03:56:48'),
+(31, 'CV. TERUS JAYA GORDEN', 2, 1, '2021-09-24 08:09:26', '2021-10-27 03:56:48'),
+(32, 'PT. BOSINDO  JAYA', 2, 1, '2021-09-24 09:22:57', '2021-10-27 03:56:48'),
+(33, 'CV. GMS. Distributor Timbangan Digital Tlp. 0812-1006-7998', 2, 1, '2021-09-24 09:44:52', '2021-10-27 03:56:48'),
+(34, 'CV. Dua Putra Petir', 5, 1, '2021-09-24 10:17:30', '2021-10-27 03:56:48'),
+(35, 'SURYA DJAYA ABADI', 5, 1, '2021-09-24 10:17:50', '2021-10-27 03:56:48'),
+(36, 'CV. Niagro Supratama Abadi', 2, 1, '2021-09-24 10:52:01', '2021-10-27 03:56:48'),
+(37, 'PT. RAJA PIPA INDONESIA', 5, 1, '2021-09-24 10:53:42', '2021-10-27 03:56:48'),
+(38, 'CV. JATIM TRONIK - Surabaya - Jawa Timur - Indonesia', 4, 1, '2021-09-24 12:32:45', '2021-10-27 03:56:48'),
+(39, 'PT. ANUGRAH PUTRA KENCANA', 5, 1, '2021-09-24 13:44:46', '2021-10-27 03:56:48'),
+(40, 'PT. MOJOPAHIT MANDIRI JAYA SENTOSA', 5, 1, '2021-09-24 15:18:01', '2021-10-27 03:56:48'),
+(41, 'CV. Dua Putra Petir', 5, 1, '2021-09-24 15:23:31', '2021-10-27 03:56:48'),
+(42, 'Dassindo Abadi', 5, 1, '2021-09-24 16:03:55', '2021-10-27 03:56:48'),
+(43, 'PT DWI FILTER JAYA', 5, 1, '2021-09-24 16:24:15', '2021-10-27 03:56:48'),
+(44, 'PT. KHLORIN INTI', 4, 1, '2021-09-24 16:55:31', '2021-10-27 03:56:48'),
+(45, 'PT.SURRAMA TRIDAYA MANDIRI', 4, 1, '2021-09-24 16:56:04', '2021-10-27 03:56:48'),
+(46, 'PT Zahra Inti Retsuna', 5, 1, '2021-09-24 17:30:20', '2021-10-27 03:56:48'),
+(47, 'UD. REZEKI ILLAHI - JUAL BELI AC BEKAS JAKARTA', 4, 1, '2021-09-24 18:00:30', '2021-10-27 03:56:48'),
+(48, 'SEJAHTERA INDOCOOL', 2, 1, '2021-09-24 21:00:05', '2021-10-27 03:56:48'),
+(49, 'ANSHELL PLASTIC & PACKAGING', 2, 1, '2021-09-25 07:28:34', '2021-10-27 03:56:48'),
+(50, 'PT. Jaya Persada Nusantara', 5, 1, '2021-09-25 09:25:37', '2021-10-27 03:56:48'),
+(51, 'CV. Sinar Naya Indah', 2, 1, '2021-09-25 09:30:37', '2021-10-27 03:56:48'),
+(52, 'Supra Karya Mandiri', 2, 1, '2021-09-25 09:37:30', '2021-10-27 03:56:48'),
+(53, 'Indo Autozone', 2, 1, '2021-09-25 10:23:23', '2021-10-27 03:56:48'),
+(54, 'PT. Daya Maju Utama', 2, 1, '2021-09-25 12:35:50', '2021-10-27 03:56:48'),
+(55, 'Azzaral Batik Indonesia', 0, 1, '2021-09-25 12:54:41', '2021-10-27 03:56:48'),
+(56, 'CV. Catur Jaya Atap', 5, 1, '2021-09-25 13:55:01', '2021-10-27 03:56:48'),
+(58, 'ALAT PEMADAM API JOGJA ', 0, 1, '2021-09-25 14:03:32', '2021-10-27 03:56:48'),
+(59, 'PT INTI NEPEL', 0, 1, '2021-09-25 14:52:15', '2021-10-27 03:56:48'),
+(60, 'UD.BETHANYA', 0, 1, '2021-09-25 15:00:20', '2021-10-27 03:56:48'),
+(61, 'PT Takana Redho', 0, 1, '2021-09-25 15:00:26', '2021-10-27 03:56:48'),
+(62, 'PT. TAKANA REDHO INDONESIA', 0, 1, '2021-09-25 15:00:28', '2021-10-27 03:56:48'),
+(63, 'PT Join Alfara Chemical', 0, 1, '2021-09-25 15:00:29', '2021-10-27 03:56:48'),
+(64, 'richme', 0, 1, '2021-09-25 15:00:31', '2021-10-27 03:56:48'),
+(65, 'CV.DE EF INDONESIA ', 2, 1, '2021-09-25 15:32:25', '2021-10-27 03:56:48'),
+(66, 'PT. MITRA KATIGA SEJAHTERA', 1, 1, '2021-10-27 04:20:33', '2021-10-27 04:20:33'),
+(68, 'PT MUARA ADHI PRAWIRA', 0, 1, '2021-09-25 16:40:01', '2021-10-27 03:56:48'),
+(69, 'furniture kembangjati', 0, 1, '2021-09-25 17:37:04', '2021-10-27 03:56:48'),
+(70, 'CV. Agro Teknologi', 0, 1, '2021-09-25 17:50:31', '2021-10-27 03:56:48'),
+(71, 'CV. Mutiara Abadi Pratama', 4, 1, '2021-09-25 17:51:21', '2021-10-27 03:56:48'),
+(72, 'PT SURYA LISTRIK ELEKTRIK', 4, 1, '2021-09-25 20:54:10', '2021-10-27 03:56:48'),
+(73, 'LYFII TRANS and RENTAL MOBIL SURABAYA', 0, 1, '2021-09-26 01:26:40', '2021-10-27 03:56:48'),
+(74, 'Larisa Jaya Tehnik', 2, 1, '2021-09-26 07:25:58', '2021-10-27 03:56:48'),
+(75, 'Flashcom Indonesia', 0, 1, '2021-09-26 09:02:40', '2021-10-27 03:56:48'),
+(76, 'MEGA JAYA MANDIRI', 0, 1, '2021-09-26 09:48:29', '2021-10-27 03:56:48'),
+(77, 'PT.Cahaya Lintas Semesta', 2, 1, '2021-09-26 10:36:53', '2021-10-27 03:56:48'),
+(78, 'Na Flow', 0, 1, '2021-09-26 14:29:06', '2021-10-27 03:56:48'),
+(79, 'SIDAKERTA PLASTIK PRINTING', 0, 1, '2021-09-26 15:01:04', '2021-10-27 03:56:48'),
+(80, 'CV.BINTANG BOTOL PLASTINDO', 0, 1, '2021-09-26 15:01:06', '2021-10-27 03:56:48'),
+(81, 'CV.Mitra Duta Elektrindo', 0, 1, '2021-09-26 15:01:09', '2021-10-27 03:56:48'),
+(82, 'MITRA ABADI PRINTING', 0, 1, '2021-09-26 15:01:11', '2021-10-27 03:56:48'),
+(84, 'PT. HKA Filwerd Indonesia', 0, 1, '2021-09-26 16:04:13', '2021-10-27 03:56:48'),
+(86, 'PT. TRIPUTRA JAYA MAKMUR', 1, 1, '2021-10-27 04:05:03', '2021-10-27 04:05:03'),
+(87, 'PT. Angin Ribut', 1, 1, '2021-10-27 03:57:01', '2021-10-26 20:57:01');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `companies`
+--
+ALTER TABLE `companies`
+  ADD PRIMARY KEY (`id`) USING BTREE;
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `companies`
+--
+ALTER TABLE `companies`
+  MODIFY `id` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
